@@ -1,0 +1,214 @@
+<?php
+
+use BaseCodeOy\GeoNames\GeoNames;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create(GeoNames::getAlternateNameTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->foreignId('language_id')->nullable()->constrained(GeoNames::getLanguageTableName())->cascadeOnDelete();
+            $table->unsignedInteger('geoname_id');
+            $table->string('alternate_name_id');
+            $table->string('type');
+            $table->text('name');
+            $table->boolean('is_preferred_name');
+            $table->boolean('is_short_name');
+            $table->boolean('is_colloquial');
+            $table->boolean('is_historic');
+            $table->timestamps();
+
+            $table->unique(['geoname_id', 'alternate_name_id']);
+        });
+
+        Schema::create(GeoNames::getAdministrativeCodeTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->unsignedInteger('geoname_id')->unique();
+            $table->string('code');
+            $table->string('name');
+            $table->string('name_ascii');
+            $table->timestamps();
+        });
+
+        Schema::create(GeoNames::getFeatureCodeTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->string('name')->unique();
+            $table->string('description');
+            $table->timestamps();
+        });
+
+        Schema::create(GeoNames::getLanguageTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->string('name');
+            $table->string('iso_639_1')->nullable();
+            $table->string('iso_639_2')->nullable();
+            $table->string('iso_639_3');
+            $table->timestamps();
+
+            $table->unique(['name', 'iso_639_1', 'iso_639_2', 'iso_639_3']);
+        });
+
+        Schema::create(GeoNames::getContinentTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->unsignedInteger('geoname_id')->unique();
+            $table->string('code');
+            $table->string('name');
+            $table->string('name_ascii');
+            $table->string('name_alternate'); // TODO: get rid of this and link from a translation table
+            $table->decimal('latitude');
+            $table->decimal('longitude');
+            $table->string('feature_class');
+            $table->string('feature_code');
+            $table->string('country_code');
+            $table->json('country_code_alternate');
+            $table->string('admin1_code')->nullable();
+            $table->string('admin2_code')->nullable();
+            $table->string('admin3_code')->nullable();
+            $table->string('admin4_code')->nullable();
+            $table->unsignedBigInteger('population');
+            $table->unsignedBigInteger('elevation');
+            $table->unsignedBigInteger('digital_elevation_model');
+            $table->string('timezone');
+            $table->timestamp('last_modified_at')->nullable();
+            $table->timestamps();
+        });
+
+        // $this->createTranslationTable(GeoNames::getContinentTranslationTableName(), 'continent_id', GeoNames::getContinentTableName());
+
+        Schema::create(GeoNames::getCountryTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->foreignId('continent_id')->constrained(GeoNames::getContinentTableName())->cascadeOnDelete();
+            $table->unsignedInteger('geoname_id')->unique();
+            $table->string('name');
+            $table->string('name_ascii');
+            $table->string('name_alternate'); // TODO: get rid of this and link from a translation table
+            $table->decimal('latitude');
+            $table->decimal('longitude');
+            $table->string('feature_class');
+            $table->string('feature_code');
+            $table->string('country_code');
+            $table->json('country_code_alternate');
+            $table->string('admin1_code')->nullable();
+            $table->string('admin2_code')->nullable();
+            $table->string('admin3_code')->nullable();
+            $table->string('admin4_code')->nullable();
+            $table->unsignedBigInteger('population');
+            $table->unsignedBigInteger('elevation');
+            $table->unsignedBigInteger('digital_elevation_model');
+            $table->string('timezone');
+            $table->timestamp('last_modified_at')->nullable();
+            // This is meta data
+            $table->string('iso')->nullable();
+            $table->string('iso3')->nullable();
+            $table->string('iso_numeric')->nullable();
+            $table->string('fips')->nullable();
+            $table->string('country')->nullable();
+            $table->string('capital')->nullable();
+            $table->string('area_in_sq_km')->nullable();
+            $table->string('tld')->nullable();
+            $table->string('currency_code')->nullable();
+            $table->string('currency_name')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('postal_code_format')->nullable();
+            $table->string('postal_code_regex')->nullable();
+            $table->string('languages')->nullable();
+            $table->string('geonameid')->nullable();
+            $table->string('neighbours')->nullable();
+            $table->string('equivalent_fips_code')->nullable();
+            $table->timestamps();
+        });
+
+        // $this->createTranslationTable(GeoNames::getCountryTranslationTableName(), 'country_id', GeoNames::getCountryTableName());
+
+        Schema::create(GeoNames::getDivisionTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->foreignId('country_id')->constrained(GeoNames::getCountryTableName())->cascadeOnDelete();
+            $table->unsignedInteger('geoname_id')->unique();
+            $table->string('name');
+            $table->string('name_ascii');
+            $table->string('name_alternate'); // TODO: get rid of this and link from a translation table
+            $table->decimal('latitude');
+            $table->decimal('longitude');
+            $table->string('feature_class');
+            $table->string('feature_code');
+            $table->string('country_code');
+            $table->json('country_code_alternate');
+            $table->string('admin1_code')->nullable();
+            $table->string('admin2_code')->nullable();
+            $table->string('admin3_code')->nullable();
+            $table->string('admin4_code')->nullable();
+            $table->unsignedBigInteger('population');
+            $table->unsignedBigInteger('elevation');
+            $table->unsignedBigInteger('digital_elevation_model');
+            $table->string('timezone');
+            $table->timestamp('last_modified_at')->nullable();
+            $table->timestamps();
+        });
+
+        // $this->createTranslationTable(GeoNames::getDivisionTranslationTableName(), 'division_id', GeoNames::getDivisionTableName());
+
+        Schema::create(GeoNames::getCityTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->foreignId('country_id')->constrained(GeoNames::getCountryTableName())->cascadeOnDelete();
+            $table->foreignId('division_id')->nullable()->constrained(GeoNames::getDivisionTableName())->nullOnDelete();
+            $table->unsignedInteger('geoname_id')->unique();
+            $table->string('name');
+            $table->string('name_ascii');
+            $table->string('name_alternate'); // TODO: get rid of this and link from a translation table
+            $table->decimal('latitude');
+            $table->decimal('longitude');
+            $table->string('feature_class');
+            $table->string('feature_code');
+            $table->string('country_code');
+            $table->json('country_code_alternate');
+            $table->string('admin1_code')->nullable();
+            $table->string('admin2_code')->nullable();
+            $table->string('admin3_code')->nullable();
+            $table->string('admin4_code')->nullable();
+            $table->unsignedBigInteger('population');
+            $table->unsignedBigInteger('elevation');
+            $table->unsignedBigInteger('digital_elevation_model');
+            $table->string('timezone');
+            $table->timestamp('last_modified_at')->nullable();
+            $table->timestamps();
+        });
+
+        // $this->createTranslationTable(GeoNames::getCityTranslationTableName(), 'city_id', GeoNames::getCityTableName());
+
+        Schema::create(GeoNames::getTimeZoneTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->foreignId('country_id')->constrained(GeoNames::getCountryTableName())->cascadeOnDelete();
+            $table->string('code');
+            $table->decimal('gmt_offset');
+            $table->decimal('dst_offset');
+            $table->decimal('raw_offset');
+            $table->timestamps();
+
+            $table->unique(['country_id', 'code']);
+        });
+
+        Schema::create(GeoNames::getPostalCodeTableName(), function (Blueprint $table): void {
+            $table->id();
+            $table->foreignId('country_id')->constrained(GeoNames::getCountryTableName())->cascadeOnDelete();
+            $table->string('country_code', 2); // TODO: drop this, we already link to the country
+            $table->string('postal_code', 20);
+            $table->string('place_name', 180);
+            $table->string('admin_name1', 100);
+            $table->string('admin_code1', 20);
+            $table->string('admin_name2', 100);
+            $table->string('admin_code2', 20);
+            $table->string('admin_name3', 100);
+            $table->string('admin_code3', 20);
+            $table->decimal('latitude');
+            $table->decimal('longitude');
+            $table->decimal('accuracy');
+            $table->timestamps();
+
+            $table->unique(['country_code', 'postal_code']);
+        });
+    }
+};
