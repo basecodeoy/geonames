@@ -1,0 +1,461 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AbstractReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AbstractReader.php
+
+		-
+			message: "#^Cannot call method info\\(\\) on Psr\\\\Log\\\\LoggerInterface\\|null\\.$#"
+			count: 2
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:getRecordsAsCollection\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:getRecordsForSeeding\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:loadResourcesBeforeChunkMapping\\(\\) has parameter \\$records with generic class Illuminate\\\\Support\\\\LazyCollection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:mapRecords\\(\\) has parameter \\$records with generic class Illuminate\\\\Support\\\\LazyCollection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:newQuery\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder does not specify its types\\: TModelClass$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:unloadResourcesAfterChunkMapping\\(\\) has parameter \\$records with generic class Illuminate\\\\Support\\\\LazyCollection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Parameter \\#1 \\$record of method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:filter\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Parameter \\#1 \\$record of method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:mapRecordForSeeding\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^Unsafe call to private method BombenProdukt\\\\GeoNames\\\\AbstractSeeder\\:\\:newModel\\(\\) through static\\:\\:\\.$#"
+			count: 1
+			path: src/AbstractSeeder.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\AdministrativeCode\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/AdministrativeCode.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AdministrativeCodeReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AdministrativeCodeReader.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AdministrativeCodeSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AdministrativeCodeSeeder.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\AlternateName\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/AlternateName.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AlternateNameReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AlternateNameReader.php
+
+		-
+			message: "#^Cannot call method warning\\(\\) on Psr\\\\Log\\\\LoggerInterface\\|null\\.$#"
+			count: 1
+			path: src/AlternateNameSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AlternateNameSeeder\\:\\:getLanguageId\\(\\) should return int\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/AlternateNameSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\AlternateNameSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/AlternateNameSeeder.php
+
+		-
+			message: "#^Short ternary operator is not allowed\\. Use null coalesce operator if applicable or consider using long ternary\\.$#"
+			count: 4
+			path: src/AlternateNameSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\City\\:\\:country\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/City.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\City\\:\\:division\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/City.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\City\\:\\:translations\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/City.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\City\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/City.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\CitySeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/CitySeeder.php
+
+		-
+			message: "#^Property BombenProdukt\\\\GeoNames\\\\CompositeSeeder\\:\\:\\$seeders \\(array\\<int, BombenProdukt\\\\GeoNames\\\\SeederInterface\\>\\) does not accept array\\<int\\|string, BombenProdukt\\\\GeoNames\\\\SeederInterface\\>\\.$#"
+			count: 1
+			path: src/CompositeSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Continent\\:\\:countries\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Continent.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Continent\\:\\:translations\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Continent.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\Continent\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/Continent.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\ContinentSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/ContinentSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Country\\:\\:cities\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Country.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Country\\:\\:continent\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Country.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Country\\:\\:divisions\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Country.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Country\\:\\:translations\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Country.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\Country\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/Country.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\CountryInfoReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/CountryInfoReader.php
+
+		-
+			message: "#^Cannot access offset 'geonameid' on mixed\\.$#"
+			count: 1
+			path: src/CountrySeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\CountrySeeder\\:\\:getCountryInfoRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/CountrySeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\CountrySeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/CountrySeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getAdministrativeCodes1\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getAdministrativeCodes2\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getAlternateNamesRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getCitiesRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getCountryInfoRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getFeatureCodes\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getLanguages\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getNoCountryRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getPostalCodes\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DataSource\\:\\:getTimeZones\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DataSource.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Division\\:\\:cities\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Division.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Division\\:\\:country\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Division.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Division\\:\\:translations\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Division.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\Division\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/Division.php
+
+		-
+			message: "#^Property 'code' does not exist in BombenProdukt\\\\GeoNames\\\\Country model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'code' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'country_id' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'dem' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'elevation' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'feature_code' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'geoname_id' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'latitude' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'longitude' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'name' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'population' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Property 'timezone_id' does not exist in BombenProdukt\\\\GeoNames\\\\Division model\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Short ternary operator is not allowed\\. Use null coalesce operator if applicable or consider using long ternary\\.$#"
+			count: 1
+			path: src/DivisionCreator.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\DivisionSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/DivisionSeeder.php
+
+		-
+			message: "#^Property 'iso' does not exist in BombenProdukt\\\\GeoNames\\\\Country model\\.$#"
+			count: 1
+			path: src/DivisionSeeder.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Downloader.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\Downloader\\:\\:getPopulations\\(\\) should return array\\<int\\> but returns mixed\\.$#"
+			count: 1
+			path: src/Downloader.php
+
+		-
+			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, mixed given\\.$#"
+			count: 1
+			path: src/Downloader.php
+
+		-
+			message: "#^Part \\$source \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
+			count: 1
+			path: src/Downloader.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\ExcelReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/ExcelReader.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\FeatureCode\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/FeatureCode.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\FeatureCodeReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/FeatureCodeReader.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\FeatureCodeSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/FeatureCodeSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\GeoNamesReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/GeoNamesReader.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\Language\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/Language.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\LanguageReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/LanguageReader.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\LanguageSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/LanguageSeeder.php
+
+		-
+			message: "#^Short ternary operator is not allowed\\. Use null coalesce operator if applicable or consider using long ternary\\.$#"
+			count: 2
+			path: src/LanguageSeeder.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\PostalCode\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/PostalCode.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\PostalCodeReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/PostalCodeReader.php
+
+		-
+			message: "#^Construct empty\\(\\) is not allowed\\. Use more strict comparison\\.$#"
+			count: 1
+			path: src/PostalCodeSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\PostalCodeSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/PostalCodeSeeder.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\ReaderInterface\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/ReaderInterface.php
+
+		-
+			message: "#^PHPDoc type string of property BombenProdukt\\\\GeoNames\\\\SeederCommand\\:\\:\\$description is not the same as PHPDoc type string\\|null of overridden property Illuminate\\\\Console\\\\Command\\:\\:\\$description\\.$#"
+			count: 1
+			path: src/SeederCommand.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property BombenProdukt\\\\GeoNames\\\\TimeZone\\:\\:\\$guarded is not the same as PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/TimeZone.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\TimeZoneReader\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/TimeZoneReader.php
+
+		-
+			message: "#^Method BombenProdukt\\\\GeoNames\\\\TimeZoneSeeder\\:\\:getRecords\\(\\) return type with generic class Illuminate\\\\Support\\\\LazyCollection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/TimeZoneSeeder.php
